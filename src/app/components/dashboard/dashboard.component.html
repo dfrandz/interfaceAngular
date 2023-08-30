@@ -1,0 +1,163 @@
+<section class="px-[20px]">
+    <div class="py-[20px]">
+        <ol class="flex items-center whitespace-nowrap min-w-0" aria-label="Breadcrumb">
+          <li class="text-sm">
+            <a class="flex items-center text-gray-500 hover:text-blue-600" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+              <svg class="flex-shrink-0 mr-3 h-4 w-4 text-gray-600 dark:text-gray-600" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+              Dashboard
+              <svg class="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </li>
+        </ol>
+    </div>
+    <div id="dismiss-alert" class="hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 bg-teal-50 border border-teal-200 rounded-md p-4" role="alert">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-4 w-4 text-teal-400 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <div class="text-sm text-teal-800 font-medium">
+              File has been successfully uploaded.
+            </div>
+          </div>
+          <div class="pl-3 ml-auto">
+            <div class="-mx-1.5 -my-1.5">
+              <button type="button" class="inline-flex bg-teal-50 rounded-md p-1.5 text-teal-500 hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-teal-50 focus:ring-teal-600" data-hs-remove-element="#dismiss-alert">
+                <span class="sr-only">Dismiss</span>
+                <svg class="h-3 w-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M0.92524 0.687069C1.126 0.486219 1.39823 0.373377 1.68209 0.373377C1.96597 0.373377 2.2382 0.486219 2.43894 0.687069L8.10514 6.35813L13.7714 0.687069C13.8701 0.584748 13.9882 0.503105 14.1188 0.446962C14.2494 0.39082 14.3899 0.361248 14.5321 0.360026C14.6742 0.358783 14.8151 0.38589 14.9468 0.439762C15.0782 0.493633 15.1977 0.573197 15.2983 0.673783C15.3987 0.774389 15.4784 0.894026 15.5321 1.02568C15.5859 1.15736 15.6131 1.29845 15.6118 1.44071C15.6105 1.58297 15.5809 1.72357 15.5248 1.85428C15.4688 1.98499 15.3872 2.10324 15.2851 2.20206L9.61883 7.87312L15.2851 13.5441C15.4801 13.7462 15.588 14.0168 15.5854 14.2977C15.5831 14.5787 15.4705 14.8474 15.272 15.046C15.0735 15.2449 14.805 15.3574 14.5244 15.3599C14.2437 15.3623 13.9733 15.2543 13.7714 15.0591L8.10514 9.38812L2.43894 15.0591C2.23704 15.2543 1.96663 15.3623 1.68594 15.3599C1.40526 15.3574 1.13677 15.2449 0.938279 15.046C0.739807 14.8474 0.627232 14.5787 0.624791 14.2977C0.62235 14.0168 0.730236 13.7462 0.92524 13.5441L6.59144 7.87312L0.92524 2.20206C0.724562 2.00115 0.611816 1.72867 0.611816 1.44457C0.611816 1.16047 0.724562 0.887983 0.92524 0.687069Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 items-center justify-center bg-[#EEF2F5] dark:bg-slate-900 dark:text-white shadow-lg rounded-xl mt-[10px] mb-[30px] gap-2">
+        <div class="flex gap-2 py-[15px] px-[10px] border dark:border border-l-0 border-t-0 border-b-0 border-r-2 justify-center hover:scale-95 transition-all duration-300 ease-in-out">
+            <p class="rounded-full w-5 h-5 bg-[#F90502] mt-1"></p>
+            <div class="flex flex-col gap-4">
+                <span class="text-[20px]">Total Messages</span>
+                <span class="text-[30px]">$216K</span>
+            </div>
+        </div>
+        <div class="flex gap-2 py-[15px] px-[10px] border dark:border border-l-0 border-t-0 border-b-0 border-r-2 justify-center hover:scale-95 transition-all duration-300 ease-in-out">
+            <p class="rounded-full w-5 h-5 bg-[#3EC34B] mt-1"></p>
+            <div class="flex flex-col gap-4">
+                <span class="text-[20px]">Total Campagne</span>
+                <div class="flex">
+                    <span class="text-[30px]">$216K</span>
+                    <span class="inline-flex items-center px-6 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Badge</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-2 py-[15px] px-[10px] dark:border border border-l-0 border-t-0 border-b-0 border-r-2 justify-center hover:scale-95 transition-all duration-300 ease-in-out">
+            <p class="rounded-full w-5 h-5 bg-[#3C5A9B] mt-1"></p>
+            <div class="flex flex-col gap-4">
+                <span class="text-[20px]">Total Revenue</span>
+                <span class="text-[30px]">$216K</span>
+            </div>
+        </div>
+        <div class="flex gap-2 py-[15px] px-[10px] dark:border border border-l-0 border-t-0 border-b-0 border-r-0 dark:border-r-2 justify-center hover:scale-95 transition-all duration-300 ease-in-out">
+            <p class="rounded-full w-5 h-5 bg-[#FED000] mt-1"></p>
+            <div class="flex flex-col gap-4">
+                <span class="text-[20px]">Total Revenue</span>
+                <span class="text-[30px]">$216K</span>
+            </div>
+        </div>
+    </div>
+    
+   
+
+    <div class="flex flex-col xl:flex-row mt-[10px] gap-6"> 
+        <div class="flex flex-col xl:basis-[30%] shadow-xl bg-[#563ceb] rounded-md">
+            <div class="px-[30px] py-[15px]">
+                <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-white text-black mb-7">New</span>
+                <p class="font-bold text-white text-xl w-[300px] mb-7">We have Aadded new invoicing templates!</p>
+                <p class="text-justify text-white font-mono text-[15px] pr-[80px] leading-[25px] mb-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quos voluptates officiis ex repudiandae inventore quia veritatis harum eos, tenetur ab voluptatum, consequuntur minus suscipit doloribus magni
+                Recusandae</p>
+                <button type="button" class=" py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
+                    Telechrager Maintenant
+                </button>
+            </div>
+        </div>
+        <div class="xl:basis-[70%] shadow-xl bg-[#EEEEF4] rounded-md">
+            <div class="px-[30px] py-[15px]">
+                <div class="flex flex-col">
+                    <div class="-m-1.5 overflow-x-auto">
+                      <div class="p-1.5 min-w-full h-full inline-block align-middle">
+                        <div class="overflow-hidden">
+                          <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                            <thead>
+                              <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase">Name</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase">Age</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase">Address</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase">Address</th>
+                                <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-black uppercase">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                              <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">John Brown</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">45</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">New York No. 1 Lake Park</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">New York No. 1 Lake Park</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                  <a class="text-blue-500 hover:text-blue-700" href="#">Delete</a>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">Jim Green</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">27</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">London No. 1 Lake Park</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">London No. 1 Lake Park</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                  <a class="text-blue-500 hover:text-blue-700" href="#">Delete</a>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">Joe Black</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">31</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Sidney No. 1 Lake Park</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Sidney No. 1 Lake Park</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                  <a class="text-blue-500 hover:text-blue-700" href="#">Delete</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col xl:flex-row mt-[10px] gap-6"> 
+        <div class="xl:basis-[70%] shadow-xl bg-slate-400 rounded-md">
+            <div class="px-[30px] py-[15px]">
+                <p>dashboard</p>
+            </div>
+        </div>
+        <div class="flex flex-col xl:basis-[30%] shadow-xl bg-[#563ceb] rounded-md">
+            <div class="px-[30px] py-[15px]">
+                <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-white text-black mb-7">New</span>
+                <p class="font-bold text-white text-xl w-[300px] mb-7">We have Aadded new invoicing templates!</p>
+                <p class="text-justify text-white font-mono text-[15px] pr-[80px] leading-[25px] mb-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quos voluptates adipisicing elit. Velit quos voluptates</p>
+                <button type="button" class=" py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
+                    Telechrager Maintenant
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

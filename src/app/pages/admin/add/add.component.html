@@ -1,0 +1,142 @@
+<section class="px-[20px]">
+    <div class="py-[20px]">
+        <ol class="flex items-center whitespace-nowrap min-w-0" aria-label="Breadcrumb">
+          <li class="text-sm">
+            <a class="flex items-center text-gray-500 hover:text-blue-600" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+              <svg class="flex-shrink-0 mr-3 h-4 w-4 text-gray-600 dark:text-gray-600" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+              Dashboard
+              <svg class="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </li>
+          <li class="text-sm font-semibold text-gray-800 truncate dark:text-gray-200" aria-current="page">
+            ajout-admin
+          </li>
+        </ol>
+    </div>
+
+    <div class="px-20">
+        <div class="flex gap-5">
+            <div>
+                <label for="hs-validation-name-error" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+                <div class="relative">
+                  <input type="text" id="hs-validation-name-error" name="hs-validation-name-error" class="py-3 px-4 block w-full border-red-500 rounded-md text-sm focus:border-red-500 focus:ring-red-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="hs-validation-name-error-helper">
+                  <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-sm text-red-600 mt-2" id="hs-validation-name-error-helper">Please enter a valid email address.</p>
+            </div>
+              
+            <div>
+                <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+                <div class="relative">
+                  <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="hs-validation-name-success-helper">
+                  <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
+            </div>
+            <div>
+                <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+                <div class="relative">
+                  <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="hs-validation-name-success-helper">
+                  <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4">
+                    <label class="form-label text-primary">Photo<span class="required">*</span></label>
+                     <div class="avatar-upload">
+                        <div class="avatar-preview">
+                            <!-- <div *ngIf="url == null" id="imagePreview" style="background-image: url(assets/images/no-img-avatar.png);"> 			
+                            </div> -->
+                            
+                            
+                        </div>
+                        <div class="change-btn mt-2 mb-lg-0 mb-3">
+                            <input type='file' class="form-control d-none"  ngModel name="photo"  id="imageUpload" accept=".png, .jpg, .jpeg" required>
+                            <label for="imageUpload" class="dlab-upload mb-0 btn btn-primary btn-sm">Choose File</label>
+                        </div>
+                    </div>	
+                </div>
+                <div class="col-xl-9 col-lg-8">
+                    <div class="row">
+                        <div class="col-xl-6 col-sm-6">
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label text-primary">Pays<span class="required">*</span></label>
+                              <input type="text" class="form-control" ngModel name="pays" placeholder="TOGO" required>
+                            </div>
+                            <div class="mb-3">
+                              <label  class="form-label text-primary">Type Approval<span class="required">*</span></label>
+                                <div class="d-flex">
+                                    <input type="text" class="form-control" ngModel name="type_approval" placeholder="Mandatory" id="datepicker" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select form-select-sm-3 mb-3" ngModel name="label_requirement" aria-label=".form-select-lg example" required>
+                                    <option selected>label requirement</option>
+                                    <option value="YES">YES</option>
+                                    <option value="NO">NO</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select form-select-sm-3 mb-3" ngModel name="sample_requirement" aria-label=".form-select-lg example" required>
+                                    <option selected>sample requirement</option>
+                                    <option value="YES">YES</option>
+                                    <option value="NO">NO</option>
+                                 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-sm-6">
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput4" class="form-label text-primary">Compagnie<span class="required">*</span></label>
+                              <input type="text" class="form-control" ngModel name="autorite"  placeholder="ARCEP" required>
+                            </div>
+                            <div class="d-flex tw-gap-4">
+                                <div class="mb-3">
+                                    <label  class="form-label text-primary">Average lead time<span class="required">*</span></label>
+                                    <input type="text" class="form-control w-60 ms-3" ngModel name="average_lead"  placeholder="1 week" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label  class="form-label text-primary">Approval validity<span class="required">*</span></label>
+                                    <input type="text" class="form-control w-60 ms-3" ngModel name="approval_validity" placeholder="1 year" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select form-select-sm-3 mb-3" ngModel name="local_represent" aria-label=".form-select-lg example" required>
+                                    <option selected>local represent</option>
+                                    <option value="YES">YES</option>
+                                    <option value="NO">NO</option>
+                                
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <button type="submit" class="btn btn-outline-primary me-3 tw-bg-[blue] tw-text-white" [disabled]="">Save</button>
+            </div>
+        </div>
+    </div>
+</section>
