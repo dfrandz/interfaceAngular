@@ -1,4 +1,4 @@
-<section class="px-[20px]">
+<!-- <section class="px-[20px] h-screen">
     <div class="py-[20px]">
         <ol class="flex items-center whitespace-nowrap min-w-0" aria-label="Breadcrumb">
           <li class="text-sm">
@@ -19,124 +19,149 @@
         </ol>
     </div>
 
-    <div class="px-20">
-        <div class="flex gap-5">
-            <div>
-                <label for="hs-validation-name-error" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
-                <div class="relative">
-                  <input type="text" id="hs-validation-name-error" name="hs-validation-name-error" class="py-3 px-4 block w-full border-red-500 rounded-md text-sm focus:border-red-500 focus:ring-red-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="hs-validation-name-error-helper">
-                  <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
-                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-sm text-red-600 mt-2" id="hs-validation-name-error-helper">Please enter a valid email address.</p>
-            </div>
-              
-            <div>
-                <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
-                <div class="relative">
-                  <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="hs-validation-name-success-helper">
-                  <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
-                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
-            </div>
-            <div>
-                <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
-                <div class="relative">
-                  <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="hs-validation-name-success-helper">
-                  <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
-                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
-            </div>
+</section> -->
+  <div class="px-20 py-[50px]">
+    <div class="mx-auto my-auto flex flex-col md:flex-row gap-4 md:gap-0 ipad:flex-col justify-between">
+      <!-- foto -->
+      <div class="flex flex-col gap-4 items-center">
+        <div class="relative inline-block">
+          <img class="inline-block h-[11.875rem] w-[11.875rem] rounded-full ring-2 ring-white dark:ring-gray-800" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Image Description">
         </div>
+        <form>
+          <label for="file-input" class="sr-only">Choose file</label>
+          <input type="file" name="file-input" id="file-input" class="block w-full border border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400
+            file:bg-transparent file:border-0
+            file:bg-gray-100 file:mr-4
+            file:py-3 file:px-4
+            dark:file:bg-gray-700 dark:file:text-gray-400">
+        </form>
+      </div>
+      <!-- foto -->
 
-        <div class="card-body">
-            <div class="row">
-                <div class="col-xl-3 col-lg-4">
-                    <label class="form-label text-primary">Photo<span class="required">*</span></label>
-                     <div class="avatar-upload">
-                        <div class="avatar-preview">
-                            <!-- <div *ngIf="url == null" id="imagePreview" style="background-image: url(assets/images/no-img-avatar.png);"> 			
-                            </div> -->
-                            
-                            
-                        </div>
-                        <div class="change-btn mt-2 mb-lg-0 mb-3">
-                            <input type='file' class="form-control d-none"  ngModel name="photo"  id="imageUpload" accept=".png, .jpg, .jpeg" required>
-                            <label for="imageUpload" class="dlab-upload mb-0 btn btn-primary btn-sm">Choose File</label>
-                        </div>
-                    </div>	
+      <!-- form -->
+      <div class="text-center flex flex-col gap-5 justify-center items-center">
+        <div class="flex flex-col lg:flex-row gap-5">
+          <div>
+            <label for="hs-validation-name-error" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+            <div class="relative">
+              <input type="text" id="hs-validation-name-error" name="hs-validation-name-error" class="py-3 px-4 block w-full border-red-500 rounded-md text-sm focus:border-red-500 focus:ring-red-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 border" required aria-describedby="hs-validation-name-error-helper">
+              <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+              </div>
+            </div>
+            <p class="text-sm text-red-600 mt-2" id="hs-validation-name-error-helper">Please enter a valid email address.</p>
+          </div>
+          <div>
+              <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+              <div class="relative">
+                <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 border" required aria-describedby="hs-validation-name-success-helper">
+                <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                  </svg>
                 </div>
-                <div class="col-xl-9 col-lg-8">
-                    <div class="row">
-                        <div class="col-xl-6 col-sm-6">
-                            <div class="mb-3">
-                              <label for="exampleFormControlInput1" class="form-label text-primary">Pays<span class="required">*</span></label>
-                              <input type="text" class="form-control" ngModel name="pays" placeholder="TOGO" required>
-                            </div>
-                            <div class="mb-3">
-                              <label  class="form-label text-primary">Type Approval<span class="required">*</span></label>
-                                <div class="d-flex">
-                                    <input type="text" class="form-control" ngModel name="type_approval" placeholder="Mandatory" id="datepicker" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <select class="form-select form-select-sm-3 mb-3" ngModel name="label_requirement" aria-label=".form-select-lg example" required>
-                                    <option selected>label requirement</option>
-                                    <option value="YES">YES</option>
-                                    <option value="NO">NO</option>
-                                    
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <select class="form-select form-select-sm-3 mb-3" ngModel name="sample_requirement" aria-label=".form-select-lg example" required>
-                                    <option selected>sample requirement</option>
-                                    <option value="YES">YES</option>
-                                    <option value="NO">NO</option>
-                                 
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-sm-6">
-                            <div class="mb-3">
-                              <label for="exampleFormControlInput4" class="form-label text-primary">Compagnie<span class="required">*</span></label>
-                              <input type="text" class="form-control" ngModel name="autorite"  placeholder="ARCEP" required>
-                            </div>
-                            <div class="d-flex tw-gap-4">
-                                <div class="mb-3">
-                                    <label  class="form-label text-primary">Average lead time<span class="required">*</span></label>
-                                    <input type="text" class="form-control w-60 ms-3" ngModel name="average_lead"  placeholder="1 week" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label  class="form-label text-primary">Approval validity<span class="required">*</span></label>
-                                    <input type="text" class="form-control w-60 ms-3" ngModel name="approval_validity" placeholder="1 year" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <select class="form-select form-select-sm-3 mb-3" ngModel name="local_represent" aria-label=".form-select-lg example" required>
-                                    <option selected>local represent</option>
-                                    <option value="YES">YES</option>
-                                    <option value="NO">NO</option>
-                                
-                                </select>
-                            </div>
-                        </div>
+              </div>
+              <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
+          </div>
+          <div>
+              <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+              <div class="relative">
+                <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 border" required aria-describedby="hs-validation-name-success-helper">
+                <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-5">
+          <div>
+            <label for="hs-validation-name-error" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+            <div class="relative">
+              <input type="text" id="hs-validation-name-error" name="hs-validation-name-error" class="py-3 px-4 block w-full border-red-500 rounded-md text-sm focus:border-red-500 focus:ring-red-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 border" required aria-describedby="hs-validation-name-error-helper">
+              <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+              </div>
+            </div>
+            <p class="text-sm text-red-600 mt-2" id="hs-validation-name-error-helper">Please enter a valid email address.</p>
+          </div>
+          <div>
+              <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+              <div class="relative">
+                <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 border " required aria-describedby="hs-validation-name-success-helper">
+                <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
+          </div>
+          <div>
+              <label for="hs-validation-name-success" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+              <div class="relative">
+                <input type="text" id="hs-validation-name-success" name="hs-validation-name-success" class="py-3 px-4 block w-full border-green-500 rounded-md text-sm focus:border-green-500 focus:ring-green-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 border" required aria-describedby="hs-validation-name-success-helper">
+                <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="text-sm text-green-600 mt-2" id="hs-validation-name-success-helper">Looks good!</p>
+          </div>
+        </div>
+        <!-- <div class="md:w-3/3 w-full flex flex-col shadow-xl ">
+            
+  
+            <div class="md:p-6 px-8 p-2 flex flex-col justify-center">
+               
+                <h1 class="text-gray-950 font-bold text-lg">Personal Data</h1>
+    
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex flex-col">
+                        <label for="Fullname" class="block text-sm font-medium mb-2 dark:text-white">Full name*</label>
+                        <input type="text" class="p-1 rounded-sm border text-[#002D74] dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="Fullname" class="block text-sm font-medium mb-2 dark:text-white">ID Number</label>
+                        <input type="text" class="p-1 rounded-sm border text-[#002D74] dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="Fullname" class="block text-sm font-medium mb-2 dark:text-white">Driving license</label>
+                        <input type="text" class="p-1 rounded-sm border text-[#002D74] dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
+                    </div>
+                </div>
+    
+                <div class="flex flex-col md:flex-row gap-4 mt-5">
+                    <div class="flex flex-col">
+                        <label for="Fullname" class="text-sm text-gray-700">Email</label>
+                        <input type="text" class="p-1 rounded-sm border text-[#002D74] ">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="Fullname" class="text-sm text-gray-700">Phone number</label>
+                        <input type="text" class="p-1 rounded-sm border text-[#002D74]">
+                    </div>
+                    <div class="flex flex-col">
+                        
+                        <input type="text" class="bg-[#F8F9FC] h-[40px] outline-none pl-[13px] md:w-[220px] w-[150px] rounded-[5px] placeholder:text-[14px] leading-[20px] font-normal" placeholder="Search for...">
                     </div>
                 </div>
             </div>
-            <div class="">
-                <button type="submit" class="btn btn-outline-primary me-3 tw-bg-[blue] tw-text-white" [disabled]="">Save</button>
+            <div class="flex gap-2 mt-10 justify-end md:p-6 px-8 p-2">
+                <button class="text-white p-2 bg-blue-800 px-5 rounded-lg hover:scale-105 duration-300">Register User</button>
             </div>
-        </div>
+    
+        </div> -->
+      </div>
+      <!-- form -->
     </div>
-</section>
+    <div class="flex gap-2 mt-10 justify-end md:p-6 px-8 p-2">
+      <button class="text-white p-2 bg-blue-800 px-5 rounded-lg hover:scale-105 duration-300">Register Admin</button>
+    </div>
+  </div>

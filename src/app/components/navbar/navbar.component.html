@@ -20,13 +20,12 @@
             <nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
             <ul class="space-y-1.5 gap-4 flex flex-col">
                 <li>
-                <a class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-md hover:bg-[#F90502] dark:bg-[#F90502] dark:text-white" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >
+                <a class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-md hover:bg-[#F90502] hover:text-white dark:bg-[#F90502] dark:text-white transition-all ease-in-out duration-300" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path d="M11.584 2.376a.75.75 0 01.832 0l9 6a.75.75 0 11-.832 1.248L12 3.901 3.416 9.624a.75.75 0 01-.832-1.248l9-6z" />
                         <path fill-rule="evenodd" d="M20.25 10.332v9.918H21a.75.75 0 010 1.5H3a.75.75 0 010-1.5h.75v-9.918a.75.75 0 01.634-.74A49.109 49.109 0 0112 9c2.59 0 5.134.202 7.616.592a.75.75 0 01.634.74zm-7.5 2.418a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75zm3-.75a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0v-6.75a.75.75 0 01.75-.75zM9 12.75a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75z" clip-rule="evenodd" />
                         <path d="M12 7.875a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" />
-                      </svg>
-                      
+                    </svg>
                     Dashboard
                 </a>
                 </li>
@@ -208,11 +207,7 @@
             
                     <div id="campagne-accordion" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
                         <ul class="pt-2 pl-2 flex flex-col gap-3">
-                            <li>
-                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-[#5F5F5F] dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300" routerLink="admin-add">
-                               Ajouter
-                                </a>
-                            </li>
+                            
                             <li>
                                 <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-[#5F5F5F] dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300" routerLink="admin-list">
                                 List
@@ -304,7 +299,7 @@
                         <a class="hs-tooltip-toggle block text-center" href="javascript:;">
                             <div
                             class="bg-[#4E73DF] cursor-pointer flex items-center rounded-3xl justify-center relative">
-                            <img src="" width="40px" height="40px" class="rounded-full" alt="">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" width="40px" height="40px" class="rounded-full" alt="">
                         </div>
                           <div class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-3 px-4 bg-white border text-sm text-gray-600 rounded-md shadow-md dark:bg-white dark:border-gray-700 dark:text-gray-400 w-[10rem]" role="tooltip">
                             <ul class="flex flex-col gap-4">

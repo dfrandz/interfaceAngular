@@ -13,7 +13,6 @@ const routes: Routes = [
   },
   {component:ListClientComponent, path:'client-list'},
   //admin
-  {component:AddComponent, path:'admin-add'},
   {component:ListComponent, path:'admin-list'},
   ],
   }
