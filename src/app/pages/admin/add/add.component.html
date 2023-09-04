@@ -21,15 +21,19 @@
 
 </section> -->
   <div class="px-20 py-[50px]">
-    <div class="mx-auto my-auto flex flex-col md:flex-row gap-4 md:gap-0 ipad:flex-col justify-between">
+    <div class="mx-auto my-auto flex flex-col md:flex-row gap-6 md:gap-0 ipad:flex-col justify-between">
       <!-- foto -->
       <div class="flex flex-col gap-4 items-center">
-        <div class="relative inline-block">
+        <!-- <div class="relative inline-block">
           <img class="inline-block h-[11.875rem] w-[11.875rem] rounded-full ring-2 ring-white dark:ring-gray-800" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Image Description">
+        </div> -->
+        
+        <div class="relative inline-block" *ngIf="url != null" id="imagePreview">
+            <img [src]="url" alt="" class="inline-block h-[11.875rem] w-[11.875rem] rounded-full ring-2 ring-white dark:ring-gray-800"  >	
         </div>
         <form>
           <label for="file-input" class="sr-only">Choose file</label>
-          <input type="file" name="file-input" id="file-input" class="block w-full border border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400
+          <input (change)="onselectFile($event)" type="file" name="file-input" id="file-input" class="block w-full border border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400
             file:bg-transparent file:border-0
             file:bg-gray-100 file:mr-4
             file:py-3 file:px-4

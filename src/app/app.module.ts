@@ -16,6 +16,7 @@ import { DataTablesModule } from 'angular-datatables';
 import { AddComponent } from './pages/admin/add/add.component';
 import { ListComponent } from './pages/admin/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     ListClientComponent,
     AddComponent,
-    ListComponent
+    ListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

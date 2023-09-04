@@ -5,6 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ListClientComponent } from './pages/list-client/list-client.component';
 import { AddComponent } from './pages/admin/add/add.component';
 import { ListComponent } from './pages/admin/list/list.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {path:'', component:NavbarComponent,
@@ -15,7 +16,8 @@ const routes: Routes = [
   //admin
   {component:ListComponent, path:'admin-list'},
   ],
-  }
+  },
+  {path:'login', component:LoginComponent},
 ];
 
 @NgModule({
