@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
     this.notifierService.onDefault('hello')
     this.notifierService.onInfo('integration work')
     this.notifierService.onSucces('Connexion reussi');
+    
   }
 
 }
