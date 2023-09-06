@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 //module material
 
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {NotificationModule} from './notification.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -34,6 +34,7 @@ import { LoginComponent } from './pages/login/login.component';
     DataTablesModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    NotificationModule
   
   ],
   providers: [],
