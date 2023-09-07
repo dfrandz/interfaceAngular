@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/login'])
   }
 
+  
   afficherAlerte() {
     Swal.fire({
       title: 'Are you sure?',
