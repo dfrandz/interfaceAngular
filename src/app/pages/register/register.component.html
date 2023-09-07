@@ -1,0 +1,122 @@
+
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-[#3C5A97]">
+    <div class="mx-auto max-w-2xl">
+      <div class="text-center">
+        <h2 class="text-xl text-gray-800 font-bold sm:text-3xl dark:text-white">
+          DIGICOM
+        </h2>
+      </div>
+  
+      <!-- Card -->
+      <div class="mt-5 p-4 relative z-10  border rounded-xl sm:mt-10 md:p-10  ">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div class="mb-4 sm:mb-8">
+            <label for="nom" class="block mb-2 text-sm font-medium dark:text-white">Nom</label>
+            <div class="relative">
+                <input formControlName="nom" name="nom" type="text" id="nom" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4   dark:text-gray-400" placeholder="nom">
+                <div *ngIf="myForm.get('nom').hasError('required') && myForm.get('nom').touched"  class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div>
+                <div *ngIf="myForm.get('nom').valid && myForm.get('nom').touched" class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                </div>
+            </div>
+          </div>
+          <div class="mb-4 sm:mb-8">
+            <label for="prenom" class="block mb-2 text-sm font-medium dark:text-white">Prenom</label>
+            <div class="relative">
+                <input formControlName="prenom" name="prenom" type="text" id="prenom" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4   dark:text-gray-400" placeholder="prenom">
+                <div *ngIf="myForm.get('prenom').hasError('required') && myForm.get('prenom').touched"  class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div>
+                <div *ngIf="myForm.get('prenom').valid && myForm.get('prenom').touched" class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                </div>
+            </div>
+          </div>
+  
+          <div class="mb-4 sm:mb-8">
+            <label for="email" class="block mb-2 text-sm font-medium dark:text-white">Work Email</label>
+            <div class="relative">
+                <input 
+                    formControlName="email"
+                    type="email" 
+                    name="email"
+                    id="email"
+                    class="py-3 px-4 block w-full border-red-500  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4 dark:text-gray-400 " placeholder="Email address">
+                <div *ngIf="myForm.get('email').hasError('required') && myForm.get('email').touched"  class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div>
+                <div *ngIf="myForm.get('email').hasError('pattern') && myForm.get('email').touched"  class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div>
+                <div *ngIf="myForm.get('email').valid && myForm.get('email').touched" class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                </div>
+            </div>
+            <p *ngIf="myForm.get('email').hasError('pattern') && myForm.get('email').touched" class="text-sm text-red-600 mt-2" id="hs-validation-name-error-helper">Please enter a valid email address.</p>
+          </div>
+          
+          <div class="mb-4 sm:mb-8">
+            <label for="compagnie" class="block mb-2 text-sm font-medium dark:text-white">Company Name</label>
+            <div class="relative">
+                <input formControlName="compagnie" type="text" id="compagnie" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4   dark:text-gray-400" placeholder="compagnie">
+                <div *ngIf="myForm.get('compagnie').hasError('required') && myForm.get('compagnie').touched"  class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div>
+                <div *ngIf="myForm.get('compagnie').valid && myForm.get('compagnie').touched" class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                </div>
+            </div>
+          </div>
+          <div class="mb-4 sm:mb-8">
+            <label for="password" class="block mb-2 text-sm font-medium dark:text-white">Password</label>
+            <div class="relative">
+                <input formControlName="password" name="password" type="password" id="password" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4   dark:text-gray-400" placeholder="password">
+                <div *ngIf="myForm.get('password').hasError('required') && myForm.get('password').touched"  class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div>
+                <!-- <div *ngIf="myForm.get('password').hasError('pattern') && myForm.get('password').touched"  class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div> -->
+                <div *ngIf="myForm.get('password').valid && myForm.get('password').touched" class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                    <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                </div>
+            </div>
+          </div>
+          <div class="flex">
+            <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500   dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-default-checkbox">
+            <label for="hs-default-checkbox" class="text-sm text-gray-500 ml-3 dark:text-gray-400">I agree to the terms and conditions and the privacy policy.</label>
+          </div>
+          <div class="mt-6 grid">
+            <button [disabled]="!myForm.valid" type="submit" class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-[#002D74] text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- End Card -->
+    </div>
+  </div>

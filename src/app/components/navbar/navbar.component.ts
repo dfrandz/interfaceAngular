@@ -14,10 +14,10 @@ export class NavbarComponent implements OnInit {
   }
 
   logOut=()=>{
-    this.router.navigate(['/login'])
+    this.router.navigate(['login'])
   }
 
-  
+
   afficherAlerte() {
     Swal.fire({
       title: 'Are you sure?',
