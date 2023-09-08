@@ -32,12 +32,10 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit=()=>{
-    console.log("form",this.myForm.value);
-    console.log("status",this.myForm.status);
     if(this.myForm.status){
       this.authService.regiser$(this.myForm.value as User).pipe().subscribe({
         next:(response) =>{
-          this.log(response)
+          // this.log(response)
           this.notifierService.onSucces('Creation de compte reussie');
           this.router.navigate(['login'])
         },

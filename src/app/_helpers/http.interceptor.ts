@@ -20,7 +20,7 @@ export class HttpRequestInterceptor implements HttpInterceptor {
       let clone = req.clone({
         headers : req.headers.set('Authorization',`Bearer ${token}`)
       })
-      console.log(clone)
+      // console.log(clone)
       return next.handle(clone).pipe(
         catchError(error =>{
           console.log(error)

@@ -30,7 +30,7 @@ export class LoginComponent {
       this.isLoading.next(true)
       this.authService.login$(this.loginForm.value).pipe().subscribe({
         next:(user)=>{
-          this.log(user)
+          // this.log(user)
           this.notifierService.onSucces('Connexion reussi');
           this.isLoading.next(false)
           this.router.navigate(['dashboard'])
