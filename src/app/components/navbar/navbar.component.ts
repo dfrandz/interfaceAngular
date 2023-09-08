@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-navbar',
@@ -8,13 +9,18 @@ import Swal from 'sweetalert2';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router:Router){}
+  constructor(private router:Router, private authService: AuthService){}
 
   ngOnInit(): void {
   }
 
   logOut=()=>{
-    this.router.navigate(['login'])
+    this.authService.logout$.pipe().subscribe({
+      next:(data)=>{
+        console.log(data.message)
+        Swal.fire('Good Bye',`${data.message}`,'success')
+      }
+    })
   }
 
 

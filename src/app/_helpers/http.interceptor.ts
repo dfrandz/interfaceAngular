@@ -2,47 +2,37 @@ import { Injectable } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { TokenService } from '../services/token/token.service';
+import { error } from 'jquery';
 
-import { EventBusService } from './event-bus.service';
-import { StorageService } from '../services/storage/storage.service';
-import { EventData } from './event.class';
 
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {
   private isRefreshing = false;
 
-  constructor(private storageService: StorageService, private eventBusService: EventBusService) { }
+  constructor(private tokenService: TokenService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    req = req.clone({
-      withCredentials: true,
-    });
+    // console.log(req)
 
-    return next.handle(req).pipe(
-      catchError((error) => {
-        if (
-          error instanceof HttpErrorResponse &&
-          !req.url.includes('api/auth/login') &&
-          error.status === 401
-        ) {
-          return this.handle401Error(req, next);
-        }
-
-        return throwError(() => error);
+    const token =this.tokenService.getToken()
+    if(token !=null){
+      let clone = req.clone({
+        headers : req.headers.set('Authorization',`Bearer ${token}`)
       })
-    );
-  }
+      console.log(clone)
+      return next.handle(clone).pipe(
+        catchError(error =>{
+          console.log(error)
+          if(error.status ===401){
+            this.tokenService.clearTokenExpired()
+          }
+          return throwError('sesseion Expired')
+        })
+      )
 
-  private handle401Error(request: HttpRequest<any>, next: HttpHandler) {
-    if (!this.isRefreshing) {
-      this.isRefreshing = true;
-
-      if (this.storageService.isLoggedIn()) {
-        this.eventBusService.emit(new EventData('logout', null));
-      }
     }
-
-    return next.handle(request);
+    return next.handle(req);
   }
 }
 

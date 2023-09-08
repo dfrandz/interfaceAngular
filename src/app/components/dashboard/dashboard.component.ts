@@ -11,10 +11,6 @@ export class DashboardComponent implements OnInit {
   constructor(private notifierService: NotificationService){}
 
   ngOnInit(): void {
-    this.notifierService.onDefault('hello')
-    this.notifierService.onInfo('integration work')
-    this.notifierService.onSucces('Connexion reussi');
-    
   }
 
 }

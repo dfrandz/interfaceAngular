@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, tap, throwError,catchError } from 'rxjs';
 import { AuthResponse } from 'src/app/interface/auth/auth-response';
 import { User } from 'src/app/interface/auth/user';
 import { environment } from 'src/environments/environment.development';
+import { TokenService } from '../token/token.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,27 +16,32 @@ export class AuthService {
   userSubject!: BehaviorSubject<User|null>
   
 
-  constructor(private http:HttpClient) { 
-    this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!));
-    this.user=this.userSubject.asObservable();
+  constructor(private http:HttpClient, private tokenService: TokenService) { 
+    // this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!));
+    // this.user=this.userSubject.asObservable();
   }
 
-  public get userValue() {
-    return this.userSubject.value;
-  }
+  // public get userValue() {
+  //   return this.userSubject.value;
+  // }
+
+  getProfil$ = <Observable<AuthResponse>>this.http.get<AuthResponse>(`${environment.apiBaseUrl}/user-profile`)
 
   login$ = (user:User) => <Observable<AuthResponse>>this.http.post<AuthResponse>(`${environment.apiBaseUrl}/auth/login`, user).pipe(
     tap(user =>{
-        localStorage.setItem("user", JSON.stringify(user));
-        localStorage.setItem("token", JSON.stringify(user['token']));
-        this.userSubject.next(user.user);
-        this.isLoggedIn$.next(true)
+        this.tokenService.saveToken(user['access_token'])
+        localStorage.setItem("user", JSON.stringify(user['user']));
     }),
     catchError(this.handleError)
   )
 
   regiser$ = (user:User) =><Observable<AuthResponse>>this.http.post<AuthResponse>(`${environment.apiBaseUrl}/auth/register`, user).pipe()
 
+  logout$= <Observable<any>>this.http.get<any>(`${environment.apiBaseUrl}/auth/logout`).pipe(
+    tap(response =>{
+      this.tokenService.clearToken()
+    })
+  )
 
 
   private handleError(error:HttpErrorResponse):Observable<never>{

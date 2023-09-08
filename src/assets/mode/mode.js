@@ -1,7 +1,7 @@
 const HSThemeAppearance = {
     
     init() {
-        console.log('dona');
+       
         const defaultTheme = 'default'
         let theme = localStorage.getItem('hs_theme') || defaultTheme
 
@@ -9,7 +9,7 @@ const HSThemeAppearance = {
         this.setAppearance(theme)
     },
     _resetStylesOnLoad() {
-        console.log('dona');
+        
         const $resetStyles = document.createElement('style')
         $resetStyles.innerText = `*{transition: unset !important;}`
         $resetStyles.setAttribute('data-hs-appearance-onload-styles', '')
@@ -17,7 +17,7 @@ const HSThemeAppearance = {
         return $resetStyles
     },
     setAppearance(theme, saveInStore = true, dispatchEvent = true) {
-        console.log('dona');
+        
         const $resetStylesEl = this._resetStylesOnLoad()
 
         if (saveInStore) {
@@ -43,7 +43,7 @@ const HSThemeAppearance = {
         }
     },
     getAppearance() {
-        console.log('dona');
+      
         let theme = this.getOriginalAppearance()
         if (theme === 'auto') {
             theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
@@ -58,14 +58,14 @@ const HSThemeAppearance = {
 HSThemeAppearance.init()
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    console.log('dona');
+    
     if (HSThemeAppearance.getOriginalAppearance() === 'auto') {
         HSThemeAppearance.setAppearance('auto', false)
     }
 })
 
 window.addEventListener('load', () => {
-    console.log('dona');
+    
     const $clickableThemes = document.querySelectorAll('[data-hs-theme-click-value]')
     const $switchableThemes = document.querySelectorAll('[data-hs-theme-switch]')
 
@@ -74,7 +74,7 @@ window.addEventListener('load', () => {
     })
 
     $switchableThemes.forEach($item => {
-        console.log('dona');
+        
         $item.addEventListener('change', (e) => {
             HSThemeAppearance.setAppearance(e.target.checked ? 'dark' : 'default')
         })
@@ -83,7 +83,7 @@ window.addEventListener('load', () => {
     })
 
     window.addEventListener('on-hs-appearance-change', e => {
-        console.log('dona');
+        
         $switchableThemes.forEach($item => {
             $item.checked = e.detail === 'dark'
         })
