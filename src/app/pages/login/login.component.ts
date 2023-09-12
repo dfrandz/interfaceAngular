@@ -35,9 +35,9 @@ export class LoginComponent {
           this.isLoading.next(false)
           this.router.navigate(['dashboard'])
         },
-        error: (error)=>{
-          this.notifierService.onError(error);
-          this.handleError(error,[])
+        error: (HttpErrorResponse)=>{
+          this.notifierService.onError(HttpErrorResponse.error.error);
+          // this.handleError(HttpErrorResponse,[])
           this.isLoading.next(false)
         }
       })

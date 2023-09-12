@@ -8,10 +8,17 @@ import Swal from 'sweetalert2';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  userName:string=''
+  userEmail:string=''
   constructor(private router:Router, private authService: AuthService){}
 
   ngOnInit(): void {
+    this.authService.getProfil$.subscribe(
+      (res)=>{
+        this.userName =res['nom']
+        this.userEmail =res['email']
+      }
+    )
   }
 
   logOut=()=>{

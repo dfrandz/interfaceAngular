@@ -32,7 +32,7 @@ export class AuthService {
         this.tokenService.saveToken(user['access_token'])
         localStorage.setItem("user", JSON.stringify(user['user']));
     }),
-    catchError(this.handleError)
+    // catchError(this.handleError)
   )
 
   regiser$ = (user:User) =><Observable<AuthResponse>>this.http.post<AuthResponse>(`${environment.apiBaseUrl}/auth/register`, user).pipe()
